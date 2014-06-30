@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+<script src="filepicker.js"></script>
+<script>
+function initPicker() {
+ var picker = new FilePicker({
+  apiKey: 'INGRESAR AQUI TU API KEY DE GOOGLE CONSOLE',
+  clientId: 'CLIENTE ID DE TU GOOGLE CONSOLE',
+  buttonEl: document.getElementById('botongoogle'),
+    onSelect: function(file) {
+      console.log(file.title); //IMPRIMIMOS TITULO DE ARCHIVO
+      console.log(file.alternateLink); //IMPRIMIMOS LINK DE DOCUMENTO
+                     }
+  }); 
+}
+</script>  
+</body>
+<button id="botongoogle" > ARCHIVOS DRIVE </button>
+</html>
